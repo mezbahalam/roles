@@ -1,0 +1,10 @@
+<h1>welcome to home</h1>
+<% @users.each do |user| %>
+    <div style="color: red; background-color: black; width: 50%;">
+    <p></p><%= link_to user.first_name, profile_path(user.id) %></p>
+    <p><%= user.last_name %></p>
+    <p><%= user.profile_name %></p>
+    <p><%= user.email %></p>
+    </div>
+    <br>
+<% end %>
